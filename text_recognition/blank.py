@@ -17,7 +17,7 @@ imageArray = np.full((height, width, 3),255,np.uint8)
 '''
 size = imageArray.shape[:2]
 print(size)
-'''
+''' 
 
 text = "J M"
 number = "12"
