@@ -11,8 +11,8 @@ height = 300
 # zeros(shape, type) shapeは配列の大きさ
 # 配列の（行数、列数）になっている
 # 画像はwidth,heightの慣習があるが、ココは逆なので気をつけること
-imageArray = np.zeros((height, width, 3), np.uint8)
-
+#imageArray = np.zeros((height, width, 3), np.uint8)
+imageArray = np.full((height, width, 3),255,np.uint8)
 # これでサイズを確認できます
 '''
 size = imageArray.shape[:2]
@@ -23,8 +23,10 @@ text = "J M"
 number = "12"
 
 font = cv2.FONT_HERSHEY_SIMPLEX
-cv2.putText(imageArray,text,(140,100),font, 2,(255,255,255),5)
-cv2.putText(imageArray,number,(160,200),font, 2,(255,255,255),5)
+cv2.putText(imageArray,text,(140,100),font, 2,(0,0,0),5)
+cv2.putText(imageArray,number,(160,200),font, 2,(0,0,0),5)
+# cv2.putText(imageArray,text,(140,100),font, 2,(255,255,255),5)
+# cv2.putText(imageArray,number,(160,200),font, 2,(255,255,255),5)
 # 0で埋められた配列を画像として保存します
 cv2.imwrite("blank.bmp", imageArray);
 
