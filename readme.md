@@ -1,1 +1,8 @@
-FINAL YEAR PROJECT 1
+# FINAL YEAR PROJECT
+Pole Text Detection
+
+## 概要
+1. カメラを持った人間が道路上を移動する(車？歩き？)  
+1. 映像に対してリアルタイムで電柱を検出、電柱上にあるタグを読み取る 
+1. GUIに点検内容を入力する
+1. 読みとったタグをIDとして点検内容を送信する
