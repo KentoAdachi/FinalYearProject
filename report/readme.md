@@ -1,6 +1,8 @@
 ## 卒論について
-卒業論文の提出期限は12月中旬、提出後に調整が必要。分量は20ページ程度を想定。
-
+### 提出期限
+12月中旬
+### 分量
+20ページ、フォント大き目は可能
 ### 参考
 http://www.wakayama-u.ac.jp/~sakama/sotsuron/sotsuron.html
 https://www.flo-shot.com/entry/2016/10/14/174541
