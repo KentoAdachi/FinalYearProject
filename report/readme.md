@@ -69,6 +69,7 @@ LABEL DETECTION ON THE POLE
 YOLOは、現在の一般物体検出においてFaster R-CNNと並んで高い精度を示しており、Faster R-CNNより処理速度に優れるのが特徴である。
 
 ## CHAPTER 2- LITERATURE REVIEW
+関連する過去の論文や資料、文献を要約、批判的分析を述べる。
 ### Overview
 概要を図にして示す。
 #### 例
