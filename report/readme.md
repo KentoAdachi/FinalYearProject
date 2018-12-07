@@ -145,7 +145,7 @@ xavierを使う事とその理由について説明する。文字数が足り�
 
 ## CHAPTER 4 – RESULTS
 ### Preliminary Results
-実験結果について考察する。
+中間結果について報告する
 
 ### Evaluatoin
 画像処理が精度向上にもたらした事を確かめる。
