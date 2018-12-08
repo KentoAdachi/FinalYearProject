@@ -154,17 +154,17 @@ We manually labeled a large number of photographs.
 #### 例
 従来の画像認識技術は、たいらな平面状の画像に対して認識を想定しており、歪んだ画像をそのまま認識に使うと高い精度を得られない。したがって、切り出されたラベルを平面に展開する必要がある。
 曲面状の画像を平面に変形するには以下の方法を提案する。
-
 1. まず、YOLOを利用して街灯を検出する
-1.次に、検出した街灯のx方向の大きさを直径とする。
-1.ポールの形状がわかったので射影を求め平面に展開する
+1. 次に、検出した街灯のx方向の大きさを直径と定義する。
+1. ポールの形状がわかったので射影を求め平面に展開する
+以上によって平面の画像を得る
 
 #### 英訳
 Ordinary, image recognition technology is designed for a flatten image. If distorted images are used for recognition, high accuracy can not be obtained. Therefore, it is necessary to transform label to a flat surface.
-To transform a curved surface image into a plane, use the following conversion formula.
-XXXX
-Apply this formula to Figure _ X to get figure _ X
-
+To transform a curved surface image into a plane, use the following method.
+1. First, detect the pole using YOLO
+1. Next, the size of the x direction of the detected pole is defined as a diameter.
+1. Calculate the projection of a cylinder
 
 ### Label recognition
 平面に展開された画像に対して認識を行うプロセスについて説明する。
