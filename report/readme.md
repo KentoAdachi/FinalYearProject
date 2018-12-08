@@ -153,9 +153,12 @@ We manually labeled a large number of photographs.
 切り出したラベルに対して画像処理を行うプロセスについて説明する。
 #### 例
 従来の画像認識技術は、たいらな平面状の画像に対して認識を想定しており、歪んだ画像をそのまま認識に使うと高い精度を得られない。したがって、切り出されたラベルを平面に展開する必要がある。
-曲面状の画像を平面に変形するには以下の変換公式を使う。
-XXXX
-この公式を図_Xに適用することによって図_Xを得る
+曲面状の画像を平面に変形するには以下の方法を提案する。
+
+1. まず、YOLOを利用して街灯を検出する
+1.次に、検出した街灯のx方向の大きさを直径とする。
+1.ポールの形状がわかったので射影を求め平面に展開する
+
 #### 英訳
 Ordinary, image recognition technology is designed for a flatten image. If distorted images are used for recognition, high accuracy can not be obtained. Therefore, it is necessary to transform label to a flat surface.
 To transform a curved surface image into a plane, use the following conversion formula.
