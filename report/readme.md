@@ -3,9 +3,6 @@
 12月14日
 ### 分量
 20ページ程度
-### 参考
-
-
 
 ## タイトル
 LABEL DETECTION ON THE POLE
@@ -34,10 +31,6 @@ LABEL DETECTION ON THE POLE
 1. CHAPTER 5- CONCLUSION 
     1. REFERENCES 
     
-<!-- 
-students must submit their project report which will contain a project proposal summary / abstract, introduction, methodology, literature review, a report of all the work that they have done for the semester (i.e. data gathering, review, investigation, survey, design, implementation, preliminary testing, test result and analysis), a complete work plan for the second part of the FYP (gannt chart, milestone,
-detail activity, detail requirement, detail expected output), conclusion and references
--->
 
 ## Chapter1 - Introduction
 ### Background of the Problem
@@ -98,7 +91,7 @@ The overview for the literature review can be seen in the figure below.
 #### 例
 光学文字認識は、画像上にある文字を認識し、文字データに変換する事である。従来の画像認識は認識対象画像とフォント画像とのビット差分比較を行うテンプレートマッチングによって行われてきた。この方法では、画像の傾きや回転に弱く、スキャナーでスキャンされた画像に対しては高い精度を示すが、写真から文字を認識するには至らなかった。近年の研究によって、機械学習を使う事で従来よりも高い精度を得られる事が示された。そこで、我々は機械学習の一種である深層学習を利用して写真内にある文字列に対しての認識を目指す。
 #### 英訳
-ここに英訳を記述
+Optical character recognition is to recognize characters on an image and convert them into character data. Conventional image recognition has been performed by template matching for comparing bit differences between recognition target images and font images. This method is weak against the inclination and rotation of the image. It shows high accuracy for the image scanned by the scanner, but recognition of characters from the photograph is far from practical use. Recent studies have shown that using machine learning can achieve higher accuracy than this. Therefore, we aim at recognition of character strings in photos using deep learning which is a type of machine learning.
 
 ### 物体検出
 物体検出の概略について示す。
@@ -131,6 +124,10 @@ Regarding existing image recognition algorithms such as "DPM" and "R - CNN", reg
 概要を図にして示す。
 #### 例
 概要を図_Xに示す。我々の提案手法は3つのプロセスに分けられる。写真からラベルを抽出するプロセス、切り出した画像に対して何らかの画像処理を行うプロセス、出力された画像に対して認識を行うプロセスである。
+#### 英訳
+The overview is shown in Figure below. Our proposed method can be divirded into three processes.
+A process of extracting a label from a photograph, a process of image processing on the cut of image, and a process of recognizing the output.
+
 
 ### Find label from picture
 写真からラベルを抽出するプロセスについて説明する
@@ -142,6 +139,14 @@ Regarding existing image recognition algorithms such as "DPM" and "R - CNN", reg
 YOLOのアノテーションデータの構造は単純で、{カテゴリ番号 オブジェクトの中心ｘ座標 オブジェクトの中心ｙ座標 オブジェクトの幅 オブジェクトの高さ}で表現される。
 直接ファイルを編集するのは大変なのでラベリングには、ラベリング用の入力支援ツールを使う事で、作業を視覚的に行うことができる。
 我々は、大量の写真に手作業でラベリングを行った。
+#### 英訳
+Before recognizing characters, we extract the label region including character strings to be recognized from the photograph. By doing this, it is possible to suppress the detection of metabolism of characters and to reduce the calculation amount.
+To recognize the label area, use YOLO as before.
+First of all, labeling is done on a picture to which no information is added.
+Labeling is to give additional information such as classes and their coordinates included in images to original data, and machine learning learns based on this annotation data. For training data, we use photographs of utility pole shot from in-vehicle camera.
+The structure of YOLO's annotation data is simple and is expressed as {height of width object of center y coordinate object of center x coordinate object of category number object}.
+Since it is hard to edit the file directly, it is possible to visually perform the work by using the input support tool for labeling for labeling.
+We manually labeled a large number of photographs.
 
 
 ### Image prosessing
@@ -151,15 +156,23 @@ YOLOのアノテーションデータの構造は単純で、{カテゴリ番号
 曲面状の画像を平面に変形するには以下の変換公式を使う。
 XXXX
 この公式を図_Xに適用することによって図_Xを得る
+#### 英訳
+Ordinary, image recognition technology is designed for a flatten image. If distorted images are used for recognition, high accuracy can not be obtained. Therefore, it is necessary to transform label to a flat surface.
+To transform a curved surface image into a plane, use the following conversion formula.
+XXXX
+Apply this formula to Figure _ X to get figure _ X
+
 
 ### Label recognition
 平面に展開された画像に対して認識を行うプロセスについて説明する。
 #### 例
 平面に展開された画像に対して認識を行う。認識のプロセスを以下に示す。
 YOLOを用いてアルファベットa-zA-Zの52クラスの物体検知を行う。
-<!--訓練には、手書き文字データセットであるMNISTを訓練データとして識別を行う。-->
 訓練には、フォントXにノイズを載せたり変形したりして水増ししたデータを用いる。
-
+#### 英訳
+Recognize characters from flatten image. The recognition process is shown below.
+We perform object detection of 52 classes of alphabet a - z A - Z using YOLO.
+For training, use padded data by placing noise on the font image or deforming it.
 
 
 ### Workflow
@@ -173,6 +186,7 @@ xavierを使う事とその理由について説明する。文字数が足り�
 ## CHAPTER 4 – RESULTS
 ### Preliminary Results
 中間結果について報告する
+What we have done
 
 ### Expected Results
 期待される結果について考察する
