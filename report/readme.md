@@ -1,6 +1,6 @@
 ## 卒論について
 ### 提出期限
-12月中旬
+12月14日
 ### 分量
 20ページ程度
 ### 参考
@@ -19,6 +19,7 @@ LABEL DETECTION ON THE POLE
     1. Scope of study
 1. CHAPTER 2- LITERATURE REVIEW
     1. Overview
+    1. Optical character recognition
     1. YOLO
 1. CHAPTER 3 - METHODOLOGY
     1. Overview
@@ -41,14 +42,14 @@ LABEL DETECTION ON THE POLE
 自動化技術は我々人類にとって大きな課題である。
 近年,AI技術の発達によって様々なタスクが解決可能になってきている。
 その中でも文字認識は、データ入力から自動運転まで様々な分野での適用が期待されており、文字認識精度を向上させる事は強く望まれる。
-現実世界における文字認識の用途は大まかに2種類に分類できる。一つ目は、紙媒体書類の電子化(OCR)である。もう一つは、看板などのおもに人間向けに設計された標識の読み取りである。
+現実世界における文字認識の用途は大まかに2種類に分類できる。一つ目は、紙媒体書類の電子化である。もう一つは、看板などのおもに人間向けに設計された標識の読み取りである。
 一般物体上の文字の認識は形状や向き、周りの物体に左右され、認識精度は依然として実用化には程遠い。本研究の目的は、これらの文字認識精度の向上である。
 #### 英訳
 Automation technology is a big topic for us.
 In recent years, with the development of AI technology, we can solve various tasks.
 Especially character recognition is expected to be applied in various fields from data input to automatic driving, it is strongly desired to improve character recognition accuracy.
 The applications of character recognition in the real world can roughly be classified into two types.
-The first is Optical Character Recognition(OCR).
+The first is digitization of documents.
 The other is recognizing signs designed for people, such as billboards.
 Recognition of characters on general objects depends on shape, rotation, objects around them, recognition accuracy is still far from practical use.
 The purpose of this research is to improve these character recognition accuracy.
@@ -56,9 +57,9 @@ The purpose of this research is to improve these character recognition accuracy.
 ### Problem Statement
 研究で取り組む課題は何かを説明する。
 #### 例
-本研究では、一般物体上、特に柱上にある文字を認識することを考える。近年の研究では、おもに深層学習を利用したものが主流であり、本研究でも深層学習を利用して文字認識を行う。
+本研究では、物体上、特に円柱上にある文字を認識することを考える。近年の研究では、おもに深層学習を利用したものが主流であり、本研究でも深層学習を利用して文字認識を行う。
 #### 英訳
-In this research, we recognize characters on objects, especially on pillars. Recent studies mainly use deep learning, and this research also uses deep learning to do character recognition.
+In this research, we recognize characters on objects, especially on cylinder. Recent studies mainly use deep learning, and this research also uses deep learning to do character recognition.
 
 ### Objectives
 上記を踏まえて研究の目標を簡潔に定義する。
@@ -72,6 +73,9 @@ Recognize a character string in a cylindrical curved surface shape using deep le
 #### 例
 本研究では、画像認識に機械学習フレームワークであるdarknetとYOLOというネットワークを利用する。
 YOLOは、現在の一般物体検出においてFaster R-CNNと並んで高い精度を示しており、Faster R-CNNより処理速度に優れるのが特徴である。
+
+また、機械学習は大きなリソースを必要とする。そのため、GPUやCPUのパワーがあるデスクトップPCで行う事が多いが、本研究では、最終的にリアルタイムの検出を目指すために、Nvidia Jetson Xavierを使用する。
+
 #### 英訳
 In this research, we use darknet machine learning framework　and YOLO algorithm for image recognition.
 YOLO shows high accuracy as well as Faster R-CNN in object detection and much faster.
@@ -84,6 +88,25 @@ YOLO shows high accuracy as well as Faster R-CNN in object detection and much fa
 概要を図_xに示す
 #### 英訳
 The overview for the literature review can be seen in the figure below.
+
+### Optical character recognition
+文字認識の概略について示す。
+#### 例
+光学文字認識は、画像上にある文字を認識し、文字データに変換する事である。従来の画像認識は認識対象画像とフォント画像とのビット差分比較を行うテンプレートマッチングによって行われてきた。この方法では、画像の傾きや回転に弱く、スキャナーでスキャンされた画像に対しては高い精度を示すが、写真から文字を認識するには至らなかった。近年の研究によって、機械学習を使う事で従来よりも高い精度を得られる事が示された。そこで、我々は機械学習の一種である深層学習を利用して写真内にある文字列に対しての認識を目指す。
+#### 英訳
+ここに英訳を記述
+
+### 物体検出
+物体検出の概略について示す。
+#### 例
+物体検出は画像を取り込み、画像の中から定められた物体の位置とカテゴリー(クラス)を検出することである。
+
+
+#### 英訳
+Clasification + localization = object detection
+
+
+ 
 
 ### YOLO
 YOLOについて説明する
