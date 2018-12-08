@@ -99,9 +99,9 @@ The overview for the literature review can be seen in the figure below.
 ### 物体検出
 物体検出の概略について示す。
 #### 例
-物体検出は画像を取り込み、画像の中から定められた物体の位置とカテゴリー(クラス)を検出することである。
-
-
+物体検出は画像を取り込み、画像の中から定められた物体の位置とカテゴリ(クラス)を検出することである。
+下図のように、画像の中からバウンディングボックスと呼ばれる矩形の位置とそのカテゴリを識別します。
+図_X
 #### 英訳
 Clasification + localization = object detection
 
