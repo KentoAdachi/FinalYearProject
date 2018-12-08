@@ -5,6 +5,8 @@
 20ページ程度
 ### 参考
 
+
+
 ## タイトル
 LABEL DETECTION ON THE POLE
 
@@ -31,6 +33,11 @@ LABEL DETECTION ON THE POLE
     1. Expected Results
 1. CHAPTER 5- CONCLUSION 
     1. REFERENCES 
+    
+<!-- 
+students must submit their project report which will contain a project proposal summary / abstract, introduction, methodology, literature review, a report of all the work that they have done for the semester (i.e. data gathering, review, investigation, survey, design, implementation, preliminary testing, test result and analysis), a complete work plan for the second part of the FYP (gannt chart, milestone,
+detail activity, detail requirement, detail expected output), conclusion and references
+-->
 
 ## Chapter1 - Introduction
 ### Background of the Problem
@@ -174,3 +181,5 @@ xavierを使う事とその理由について説明する。文字数が足り�
 レポートの結論(提案が可能でありそうだみたいな事?)を示す
 ### REFERENCES 
 参照
+
+
