@@ -192,6 +192,7 @@ For training, use padded font data by placing noise on the image or deforming it
 1. Result analysis {Feb, Mar}
 1. Write Report {Mar, April, May}
 
+
 ### jetson xavier
 xavierを使う事とその理由について説明する。文字数が足りなければ。
 
@@ -212,7 +213,11 @@ An example of labeling is shown below.
 ### Expected Results
 期待される結果について考察する
 #### 例
-期待される結果は、ロボットが標識や看板を認識できるような精度の文字認識を実現することである。また、今回は円柱上の文字認識に限定したが、将来的には写真から3次元形状を予測して平面に展開する手法についても検討したい。
+期待される結果は、ロボットが現実世界で標識や看板を認識できるような精度の文字認識を実現することである。また、今回は円柱上の文字認識に限定したが、将来的には写真から3次元形状を予測して平面に展開する手法についても検討したい。
+#### 英訳
+The expected result is to realize character recognition with high precision so that robots can recognize signs and signs in the real world. This time we limited it to character recognition on a cylinder, but in the future we would like to consider a method to predict a three dimensional shape from a photograph and reshape it on a plane.
+
+
 
 ## CHAPTER 5- CONCLUSION
 レポートの結論(提案が可能でありそうだみたいな事?)を示す
