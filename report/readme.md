@@ -203,7 +203,11 @@ What we have done
 我々は、トレーニング用データとして、車載カメラから撮られた風景の画像から、手動で街灯とラベル領域をラベリングした。
 街灯は、認識精度を分析するために、三種類の形の違う街灯をラベリングした。
 ラベリングには、labelimgというソフトを使用した。ラベリングの例を図_Xに示す。
-
+#### 英訳
+We manually labeled streetlights and label areas from landscape images taken from the in-vehicle camera as training data.
+In order to analyze the recognition accuracy, we labeled three different types of street lamp.
+For labeling, we used software named labelimg.
+An example of labeling is shown below.
 
 ### Expected Results
 期待される結果について考察する
