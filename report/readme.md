@@ -175,13 +175,22 @@ YOLOを用いてアルファベットa-zA-Zの52クラスの物体検知を行�
 #### 英訳
 Recognize characters from flatten image. The recognition process is shown below.
 We perform object detection of 52 classes of alphabet a - z A - Z using YOLO.
-For training, use padded data by placing noise on the font image or deforming it.
+For training, use padded font data by placing noise on the image or deforming it.
 
 
 ### Workflow
 研究計画についてガントチャートを用いて説明する。
 #### 例
 研究計画を以下に示す。
+1. FYP Proposal {Sept - Dec}
+1. Literature Review {Sept, Oct}
+1. Explore deep learning {Sept, Oct}
+1. Explore object detection {Oct, Nov}
+1. Data acquisition {Nov}
+1. Design model {Nov, Dec}
+1. Coding {Dec, Jan}
+1. Result analysis {Feb, Mar}
+1. Write Report {Mar, April, May}
 
 ### jetson xavier
 xavierを使う事とその理由について説明する。文字数が足りなければ。
@@ -190,9 +199,16 @@ xavierを使う事とその理由について説明する。文字数が足り�
 ### Preliminary Results
 中間結果について報告する
 What we have done
+#### 例
+我々は、トレーニング用データとして、車載カメラから撮られた風景の画像から、手動で街灯とラベル領域をラベリングした。
+街灯は、認識精度を分析するために、三種類の形の違う街灯をラベリングした。
+ラベリングには、labelimgというソフトを使用した。ラベリングの例を図_Xに示す。
+
 
 ### Expected Results
 期待される結果について考察する
+#### 例
+期待される結果は、ロボットが標識や看板を認識できるような精度の文字認識を実現することである。また、今回は円柱上の文字認識に限定したが、将来的には写真から3次元形状を予測して平面に展開する手法についても検討したい。
 
 ## CHAPTER 5- CONCLUSION
 レポートの結論(提案が可能でありそうだみたいな事?)を示す
