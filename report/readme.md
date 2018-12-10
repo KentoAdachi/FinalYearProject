@@ -4,6 +4,7 @@
 ### 分量
 20ページ程度
 
+
 ## タイトル
 LABEL DETECTION ON THE POLE
 
@@ -55,9 +56,9 @@ The purpose of this research is to improve these character recognition accuracy.
 研究で取り組む課題は何かを説明する。
 #### 例
 本研究では、物体上、特に円柱上にある文字を認識することを考える。近年の研究では、おもに深層学習を利用したものが主流であり、本研究でも深層学習を利用して文字認識を行う。
-
 #### 英訳
 In this research, we recognize characters on objects, especially on cylinder. Recent studies mainly use deep learning, and this research also uses deep learning to do character recognition.
+
 
 ### Objectives
 上記を踏まえて研究の目標を簡潔に定義する。
@@ -183,6 +184,10 @@ For training, use padded font data by placing noise on the image or deforming it
 #### 例
 深層学習には、大量の訓練用データが必要である。そこで近年の深層学習[要出典]では、もともとあるデータにガウシアンノイズを乗せたり、コントラストを調整したり、明るさを調整したり、平滑化を行ったり、拡大縮小や回転を行ったり、反転したりと行った処理を組み合わせる事で、データを水増しする。
 データ拡張を行う事で、少ないデータで高い精度の認識を可能にする。
+
+#### 英訳
+A large amount of training data is necessary for deep learning. Therefore, in deep learning in recent years, researchers performed Gaussian noise on original data, adjust contrast, adjust brightness, perform smoothing, expand / shrink / rotate, invert by combining processing to augment the data.
+By applying data augmentation, it is possible to recognize with high accuracy with less data.
 
 ### Workflow
 研究計画についてガントチャートを用いて説明する。
