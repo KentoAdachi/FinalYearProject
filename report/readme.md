@@ -145,7 +145,7 @@ YOLOのアノテーションデータの構造は単純で、{カテゴリ番号
 #### 英訳
 Before recognizing characters, we extract the label region including character strings to be recognized from the photograph. By doing this, it is possible to suppress the detection of metabolism of characters and to reduce the calculation amount.
 To recognize the label area, use YOLO as before.
-First of all, labeling is done on a picture to which no information is added.
+First of all, we do labeling on a plain picture.
 Labeling is to give additional information such as classes and their coordinates included in images to original data, and machine learning learns based on this annotation data. For training data, we use photographs of utility pole shot from in-vehicle camera.
 The structure of YOLO's annotation data is simple and is expressed as {height of width object of center y coordinate object of center x coordinate object of category number object}.
 Since it is hard to edit the file directly, it is possible to visually perform the work by using the input support tool for labeling for labeling.
