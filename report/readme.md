@@ -55,6 +55,7 @@ The purpose of this research is to improve these character recognition accuracy.
 研究で取り組む課題は何かを説明する。
 #### 例
 本研究では、物体上、特に円柱上にある文字を認識することを考える。近年の研究では、おもに深層学習を利用したものが主流であり、本研究でも深層学習を利用して文字認識を行う。
+
 #### 英訳
 In this research, we recognize characters on objects, especially on cylinder. Recent studies mainly use deep learning, and this research also uses deep learning to do character recognition.
 
@@ -178,6 +179,10 @@ Recognize characters from flatten image. The recognition process is shown below.
 We perform object detection of 52 classes of alphabet a - z A - Z using YOLO.
 For training, use padded font data by placing noise on the image or deforming it.
 
+### Data Augmentation
+#### 例
+深層学習には、大量の訓練用データが必要である。そこで近年の深層学習では、もともとあるデータにガウシアンノイズを乗せたり、コントラストを調整したり、明るさを調整したり、平滑化を行ったり、拡大縮小や回転を行ったり、反転したりと行った処理を組み合わせる事で、データを水増しする。
+データ拡張を行う事で、少ないデータで高い精度の認識を可能にする。
 
 ### Workflow
 研究計画についてガントチャートを用いて説明する。
