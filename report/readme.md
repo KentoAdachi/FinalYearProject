@@ -138,7 +138,7 @@ A process of extracting a label from a photograph, a process of image processing
 文字を認識する前に、写真から認識したい文字列を含むラベル領域を切り出す。こうすることで文字の謝検出の抑制と計算量の軽減に繋がる。
 ラベル領域の認識には前途の通りYOLOを利用する。
 まず、何も情報が付加されていない写真にラベリングを行う。
-ラベリングとは、もともとあるデータに対して、画像内に含まれるクラスやその座標といった付加情報を与える事であり、機械学習はこのアノテーションデータを元に学習をしていく。訓練用のデータには車載カメラから撮影された電柱の写真を用いる。
+ラベリングとは、もともとあるデータに対して、画像内に含まれるクラスやその座標といった付加情報を与える事であり、機械学習はこのアノテーションデータを元に学習をしていく。訓練用のデータには車載カメラから撮影された街灯の写真を用いる。
 YOLOのアノテーションデータの構造は単純で、{カテゴリ番号 オブジェクトの中心ｘ座標 オブジェクトの中心ｙ座標 オブジェクトの幅 オブジェクトの高さ}で表現される。
 直接ファイルを編集するのは大変なのでラベリングには、ラベリング用の入力支援ツールを使う事で、作業を視覚的に行うことができる。
 我々は、大量の写真に手作業でラベリングを行った。
@@ -146,7 +146,7 @@ YOLOのアノテーションデータの構造は単純で、{カテゴリ番号
 Before recognizing characters, we extract the label region including character strings to be recognized from the photograph. By doing this, it is possible to suppress the detection of metabolism of characters and to reduce the calculation amount.
 To recognize the label area, use YOLO as before.
 First of all, we do labeling on a plain picture.
-Labeling is to give additional information such as classes and their coordinates included in images to original data, and machine learning learns based on this annotation data. For training data, we use photographs of utility pole shot from in-vehicle camera.
+Labeling is to give additional information such as classes and their coordinates included in images to original data, and machine learning learns based on this annotation data. For training data, we use photographs of streetlight poles shot from in-vehicle camera.
 The structure of YOLO's annotation data is simple and is expressed as {height of width object of center y coordinate object of center x coordinate object of category number object}.
 Since it is hard to edit the file directly, it is possible to visually perform the work by using the input support tool for labeling for labeling.
 We manually labeled a large number of photographs.
