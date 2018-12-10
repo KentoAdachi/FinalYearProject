@@ -79,6 +79,8 @@ YOLOは、現在の一般物体検出においてFaster R-CNNと並んで高い�
 In this research, we use darknet machine learning framework　and YOLO algorithm for image recognition.
 YOLO shows high accuracy as well as Faster R-CNN in object detection and much faster.
 
+Machine learning also requires large resources. Therefore, it is often done with desktop PC with GPU and CPU power,in this research, Nvidia Jetson Xavier is used for real time detection.
+
 ## CHAPTER 2 - LITERATURE REVIEW
 関連する過去の論文や資料、文献を要約、批判的分析を述べる。
 ### Overview
@@ -104,7 +106,6 @@ Optical character recognition is to recognize characters on an image and convert
 #### 英訳
 Object detection is to capture an image and detect the position and category (class) of the object determined from the image.
 As shown in the figure below, we identify the position of the rectangle called the bounding box and its category from the image.
-
 
  
 
@@ -206,6 +207,8 @@ By applying data augmentation, it is possible to recognize with high accuracy wi
 
 ### jetson 
 xavierを使う事とその理由について説明する。文字数が足りなければ。
+#### 例
+Jetsonシリーズは、Nvidiaが開発する、ロボットやドローン、セキュリティカメラなど、比較的小型のモバイル機器に搭載できるAIコンピュータボードだ。
 
 ## CHAPTER 4 – RESULTS
 ### Preliminary Results
