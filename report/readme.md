@@ -211,8 +211,7 @@ xavierを使う事とその理由について説明する。文字数が足り�
 Jetsonシリーズは、Nvidiaが開発する、ロボットやドローン、セキュリティカメラなど、比較的小型のモバイル機器に搭載できるAIコンピュータボードだ。
 最新モデルのXavierは、512コアのVolta Tensor GPUを搭載して理論上従来のTX2の20倍の性能を獲得した。
 #### 英訳
-The Jetson series is an AI computer board that can be mounted on small mobile devices such as robots, drone, security cameras developed by Nvidia.
-The latest model "Jetson Xavier"
+The Jetson series is an AI computer board that can be mounted on relatively small mobile devices such as robots, drone, security cameras developed by Nvidia.  The latest model "Jetson Xavier" has the 512 core Volta Tensor GPU and theoretically gained 20 times the performance of the conventional model TX 2.
 
 ## CHAPTER 4 – RESULTS
 ### Preliminary Results
