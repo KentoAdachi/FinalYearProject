@@ -100,7 +100,8 @@ Optical character recognition is to recognize characters on an image and convert
 下図のように、画像の中からバウンディングボックスと呼ばれる矩形の位置とそのカテゴリを識別します。
 図_X
 #### 英訳
-Clasification + localization = object detection
+Object detection is to capture an image and detect the position and category (class) of the object determined from the image.
+As shown in the figure below, we identify the position of the rectangle called the bounding box and its category from the image.
 
 
  
@@ -193,7 +194,7 @@ For training, use padded font data by placing noise on the image or deforming it
 1. Write Report {Mar, April, May}
 
 
-### jetson xavier
+### jetson 
 xavierを使う事とその理由について説明する。文字数が足りなければ。
 
 ## CHAPTER 4 – RESULTS
@@ -221,7 +222,12 @@ The expected result is to realize character recognition with high precision so t
 
 ## CHAPTER 5- CONCLUSION
 レポートの結論(提案が可能でありそうだみたいな事?)を示す
+#### 例
+我々は、深層学習を利用して写真から柱面上にある文字列を認識する手法を提案した。
+深層学習には、今まで成し遂げられなかった課題を解決する力があり、今後も様々な分野で応用がされて行くだろう。
+#### 英訳
+We have proposed a method to recognize character strings on a cylinder surface from photographs using deep learning.
+Deep learning has the power to solve the problems that we have not accomplished so far and will continue to be applied in various fields from now on.
+
 ### REFERENCES 
-参照
-
-
+YOLO
