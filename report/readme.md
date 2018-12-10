@@ -209,6 +209,10 @@ By applying data augmentation, it is possible to recognize with high accuracy wi
 xavierを使う事とその理由について説明する。文字数が足りなければ。
 #### 例
 Jetsonシリーズは、Nvidiaが開発する、ロボットやドローン、セキュリティカメラなど、比較的小型のモバイル機器に搭載できるAIコンピュータボードだ。
+最新モデルのXavierは、512コアのVolta Tensor GPUを搭載して理論上従来のTX2の20倍の性能を獲得した。
+#### 英訳
+The Jetson series is an AI computer board that can be mounted on small mobile devices such as robots, drone, security cameras developed by Nvidia.
+The latest model "Jetson Xavier"
 
 ## CHAPTER 4 – RESULTS
 ### Preliminary Results
