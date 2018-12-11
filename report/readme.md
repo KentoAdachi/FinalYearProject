@@ -76,14 +76,12 @@ In this research, we recognize characters on objects, especially on cylinder. Re
 #### 例
 本研究では、画像認識に機械学習フレームワークであるdarknetとYOLOというネットワークを利用する。
 YOLOは、現在の一般物体検出においてFaster R-CNNと並んで高い精度を示しており、Faster R-CNNより処理速度に優れるのが特徴である。
-
 また、機械学習は大きなリソースを必要とする。そのため、GPUやCPUのパワーがあるデスクトップPCで行う事が多いが、本研究では、最終的にリアルタイムの検出を目指すために、Nvidia Jetson Xavierを使用する。
 
 #### 英訳
 In this research, we use darknet machine learning framework　and YOLO algorithm for image recognition.
 YOLO shows high accuracy as well as Faster R-CNN in object detection and much faster.
-
-Machine learning also requires large resources. Therefore, it is often done with desktop PC with GPU and CPU power,in this research, Nvidia Jetson Xavier is used for real time detection.
+Machine learning also requires large resources. Therefore, it is often done with desktop PC with high GPU and CPU power,in this research, Nvidia Jetson Xavier is used for real time detection.
 
 <!-- 
 ①物体領域候補の提案
