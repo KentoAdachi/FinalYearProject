@@ -63,9 +63,12 @@ In this research, we recognize characters on objects, especially on cylinder. Re
 ### Objectives
 上記を踏まえて研究の目標を簡潔に定義する。
 #### 例
-深層学習を利用し円柱曲面状にある文字列を認識する。
+深層学習を利用し円柱曲面状にある文字列を認識する精度を上げる。
+強力な組み込みGPUであるNvidia Jetsonによってクライアント側でのMachine Learningを行う。
+
 #### 英訳
-Recognize a character string in a cylindrical curved surface shape using deep learning.
+1. Increase the accuracy of recognizing character strings in a cylindrical curved surface using deep learning.
+1. To use powerful built-in GPU Nvidia Jetson Xavier to develop deep learning on the client side.
 
 ### Scope of study
 本研究の取り扱う範囲について記述する。
@@ -118,6 +121,11 @@ YOLOは2016年に発表されたリアルタイム物体認識アルゴリズム
 YOLO is a real-time object recognition algorithm, which was announced in 2016.
 Regarding existing image recognition algorithms such as "DPM" and "R - CNN", region estimation and classification of images are separated, and therefore processing tends to be complicated and processing time tends to be long. In "YOLO", we perform that "image area estimation" and "classification" at the same time. The algorithm of "YOLO" is simple because it is completed with one CNN, and it has merits such as quick processing as compared with the existing method, less background error detection.
 
+### Faster R-CNN
+Faster　R-CNNについて説明する。
+#### 例
+Faster RCNNは特徴マップを抽出するConvolutional Layerと物体領域を抽出する Region Proposal Networkに加え、分類、回帰の結果を出力するネットワークで構成されています。
+Conv Layerで得られた結果をRegion Proposal Networkを使い、領域を抽出し、分類しています。特に重要なのはRegion Proposal Networkと記載されている部分で、ここが従来手法からのFaster RCNNの改善になる部分です。
 
 ### 画像認識に関する論文X
 前例を洗ってこれを分析する。
