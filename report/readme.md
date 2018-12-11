@@ -134,13 +134,15 @@ Faster　R-CNNについて説明する。
 R-CNNは画像全体から特徴を抽出するCNNを元に考案された。それはRegion毎の特徴を検出可能であり、人間の行う認識に近い。
 R-CNNではまず、入力画像からregion proposalを抽出する。そして、proposed regionに対して認識を行う。
 Fast R-CNNはCNN　Detectorの実行回数を減らすためにモデルを改善したものである。
-Faster R-CNNはFaster R-CNNでボトルネック出会ったRegion Proposalを改善したものである。
+Faster R-CNNはFaster R-CNNでボトルネックであったRegion Proposalを改善したものである。
 Faster R-CNNでは似た特徴を持った小さい領域を統合させていくことで、物体が存在しそうな領域に当たりをつけるSelective Search(選択的検索法)という手法が用いられた。
+#### 英訳
+R-CNN was invented based on CNN extracting features from the entire image. It can detect features of each region and that is close to human's recognition process.
+First, in R-CNN, region proposal is extracted from the input image. Then, we do recognition for the proposed region.
+Fast R-CNN is an improvement of R-CNN model to reduce the execution count of the CNN Detector.
+Faster R-CNN is an improvement of Faster R-CNN model to make the region proposal which is a bottleneck in Faster R-CNN better.
+Faster R-CNN integrates small regions having similar features, and chooses an area where an object is likely to exist.
 
-
-### SSD
-SSDについて説明する。
-#### 例
 
 
 ### 画像認識に関する論文X
