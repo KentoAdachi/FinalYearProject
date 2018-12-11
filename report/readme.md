@@ -6,7 +6,7 @@
 
 
 ## タイトル
-LABEL DETECTION ON THE POLE
+TEXT DETECTION ON THE POLE
 
 ## 構成内容
 1. CHAPTER 1 - INTRODUCTION
@@ -124,17 +124,17 @@ There is "handwritten characters recognition" in the implementation example of i
 ### YOLO
 YOLOについて説明する
 #### 例
-YOLOは2016年に発表されたリアルタイム物体認識アルゴリズムである。
-既存の画像認識のアルゴリズムである「DPM」や「R-CNN」は、画像の領域推定と分類が分断されており、それゆえ処理が複雑であり、かつ処理時間も長くなりがちであった。 「YOLO」では、画像認識を回帰問題に落とし込み、「画像の領域推定」と「分類」を同時に行うことを実現した。 「YOLO」のアルゴリズムは１つのCNNで完結するためシンプルであり、また既存の手法と比較して処理が早く、背景の誤検出が少ないなどのメリットを得ることができる。
+YOLOは2016年に発表されたリアルタイム物体検出アルゴリズムである。
+既存の画像検出のアルゴリズムである「DPM」や「R-CNN」は、画像の領域推定と分類が分断されており、それゆえ処理が複雑であり、かつ処理時間も長くなりがちであった。 「YOLO」では、画像検出を回帰問題に落とし込み、「画像の領域推定」と「分類」を同時に行うことを実現した。 「YOLO」のアルゴリズムは１つのCNNで完結するためシンプルであり、また既存の手法と比較して処理が早く、背景の誤検出が少ないなどのメリットを得ることができる。
 #### 英訳
-YOLO is a real-time object recognition algorithm, which was announced in 2016.
-Regarding existing image recognition algorithms such as "DPM" and "R - CNN", region estimation and classification of images are separated, and therefore processing tends to be complicated and processing time tends to be long. In "YOLO", we perform that "image area estimation" and "classification" at the same time. The algorithm of "YOLO" is simple because it is completed with one CNN, and it has merits such as quick processing as compared with the existing method, less background error detection.
+YOLO is a real-time object detection algorithm, which was announced in 2016.
+Regarding existing image detection algorithms such as "DPM" and "R - CNN", region estimation and classification of images are separated, and therefore processing tends to be complicated and processing time tends to be long. In "YOLO", we perform that "image area estimation" and "classification" at the same time. The algorithm of "YOLO" is simple because it is completed with one CNN, and it has merits such as quick processing as compared with the existing method, less background error detection.
 
-### Faster R-CNN
+### R-CNN, Fast R-CNN, Faster R-CNN
 Faster　R-CNNについて説明する。
 #### 例
-Faster RCNNは特徴マップを抽出するConvolutional Layerと物体領域を抽出する Region Proposal Networkと分類、回帰の結果を出力するネットワークで構成されています。
-Conv Layerで得られた結果をRegion Proposal Networkを使い、領域を抽出し、分類しています。特に重要なのはRegion Proposal Networkと記載されている部分で、ここが従来手法からのFaster RCNNの改善になる部分です。
+R-CNNは画像全体から特徴を抽出するCNNを元に考案された。それはRegion毎の特徴を検出可能であり、人間の行う認識に近い。
+R-CNNではまず、入力画像からregion proposalを抽出する。そして、proposed regionに対して認識を行う。
 
 似た特徴を持った小さい領域を統合させていくことで、物体が存在しそうな領域に当たりをつけるSelective Search(選択的検索法)という手法が用いられた。
 
@@ -155,14 +155,15 @@ SSDについて説明する。
 概要を図_Xに示す。我々の提案手法は3つのプロセスに分けられる。写真からラベルを抽出するプロセス、切り出した画像に対して何らかの画像処理を行うプロセス、出力された画像に対して認識を行うプロセスである。
 #### 英訳
 The overview is shown in Figure below. Our proposed method can be divirded into three processes.
-A process of extracting a label from a photograph, a process of image processing on the cut of image, and a process of recognizing the output.
+A process of extracting a label from a photograph, a process of image processing on the cut of image, and a process of 
+zing the output.
 
 
 ### Find label from picture
 写真からラベルを抽出するプロセスについて説明する
 #### 例
 文字を認識する前に、写真から認識したい文字列を含むラベル領域を切り出す。こうすることで文字の謝検出の抑制と計算量の軽減に繋がる。
-ラベル領域の認識には前途の通りYOLOを利用する。
+ラベル領域の検出には前途の通りYOLOを利用する。
 まず、何も情報が付加されていない写真にラベリングを行う。
 ラベリングとは、もともとあるデータに対して、画像内に含まれるクラスやその座標といった付加情報を与える事であり、機械学習はこのアノテーションデータを元に学習をしていく。訓練用のデータには車載カメラから撮影された街灯の写真を用いる。
 YOLOのアノテーションデータの構造は単純で、{カテゴリ番号 オブジェクトの中心ｘ座標 オブジェクトの中心ｙ座標 オブジェクトの幅 オブジェクトの高さ}で表現される。
@@ -170,7 +171,7 @@ YOLOのアノテーションデータの構造は単純で、{カテゴリ番号
 我々は、大量の写真に手作業でラベリングを行った。
 #### 英訳
 Before recognizing characters, we extract the label region including character strings to be recognized from the photograph. By doing this, it is possible to suppress the detection of metabolism of characters and to reduce the calculation amount.
-To recognize the label area, use YOLO as before.
+To detect the label area, use YOLO as before.
 First of all, we do labeling on a plain picture.
 Labeling is to give additional information such as classes and their coordinates included in images to original data, and machine learning learns based on this annotation data. For training data, we use photographs of streetlight poles shot from in-vehicle camera.
 The structure of YOLO's annotation data is simple and is expressed as {height of width object of center y coordinate object of center x coordinate object of category number object}.
@@ -255,9 +256,9 @@ An example of labeling is shown below.
 ### Expected Results
 期待される結果について考察する
 #### 例
-期待される結果は、ロボットが現実世界で標識や看板を認識できるような精度の文字認識を実現することである。また、今回は円柱上の文字認識に限定したが、将来的には写真から3次元形状を予測して平面に展開する手法についても検討したい。
+期待される結果は、ロボットが現実世界で標識や看板を認識できるような精度の文字検出を実現することである。また、今回は円柱上の文字認識に限定したが、将来的には写真から3次元形状を予測して平面に展開する手法についても検討したい。
 #### 英訳
-The expected result is to realize character recognition with high precision so that robots can recognize signs and signs in the real world. This time we limited it to character recognition on a cylinder, but in the future we would like to consider a method to predict a three dimensional shape from a photograph and reshape it on a plane.
+The expected result is to realize character detection with high precision so that robots can recognize signs and signs in the real world. This time we limited it to character detection on a cylinder, but in the future we would like to consider a method to predict a three dimensional shape from a photograph and reshape it on a plane.
 
 
 
