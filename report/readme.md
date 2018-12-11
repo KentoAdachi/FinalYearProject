@@ -14,6 +14,7 @@ TEXT DETECTION ON THE POLE
     1. Problem Statement
     1. Objectives
     1. Scope of study
+    1. Significance of the Study
 1. CHAPTER 2- LITERATURE REVIEW
     1. Overview
     1. Optical character recognition
@@ -82,6 +83,14 @@ YOLOは、現在の一般物体検出においてFaster R-CNNと並んで高い�
 In this research, we use darknet machine learning framework　and YOLO algorithm for image recognition.
 YOLO shows high accuracy as well as Faster R-CNN in object detection and much faster.
 Machine learning also requires large resources. Therefore, it is often done with desktop PC with high GPU and CPU power,in this research, Nvidia Jetson Xavier is used for real time detection.
+
+
+### Significance of the Study
+研究の意義について述べる
+#### 例
+この研究が達成されることによって、我々は円柱面上にあるテキストを検知することができる。
+それはつまり、従来人が手動で確認作業を行なっていた街灯のメンテナンスを、ロボットやドローンに任せることができるということを意味する。
+
 
 <!-- 
 ①物体領域候補の提案
