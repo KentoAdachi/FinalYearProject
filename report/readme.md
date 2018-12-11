@@ -109,14 +109,12 @@ Optical character recognition is to recognize characters on an image and convert
 #### 例
 物体検出は画像を取り込み、画像の中から定められた物体の位置とカテゴリ(クラス)を検出することである。
 下図のように、画像の中からバウンディングボックスと呼ばれる矩形の位置とそのカテゴリを識別します。
-
-初学者向けの画像認識の実装例に「手書き文字の認識」があるが、現実の画像においては、物体が1つであるとは限らない。そこで、1枚の画像の中で様々なサイズで写っている複数の物体を上手く切り出すバウンディングボックスを探す。それをクラス分類の問題にする必要がある。
+初学者向けの画像認識の実装例に「手書き文字の認識」があるが、現実の画像においては、物体が1つであるとは限らない。そこで、1枚の画像の中で様々なサイズで写っている複数の物体を上手く切り出すバウンディングボックスを探す。それをクラス分類の問題にする。
 
 図_X
 #### 英訳
 Object detection is to capture an image and detect the position and category (class) of the object determined from the image.
 As shown in the figure below, we identify the position of the rectangle called the bounding box and its category from the image.
-
 There is "handwritten characters recognition" in the implementation example of image recognition, but in actual images, there is not always only one object. Normaly, we have to find the various sized of bounding boxes in one image. After that, we can Clasify each images.
 
 ### YOLO
