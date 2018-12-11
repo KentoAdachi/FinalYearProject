@@ -90,6 +90,9 @@ Machine learning also requires large resources. Therefore, it is often done with
 #### 例
 この研究が達成されることによって、我々は円柱面上にあるテキストを検知することができる。
 それはつまり、従来人が手動で確認作業を行なっていた街灯のメンテナンスを、ロボットやドローンに任せることができるということを意味する。
+#### 英訳
+By accomplishing this research, we can detect the text on the cylinder surface.
+That means that we can leave the maintenance of the street lamps to robot or drone, which people had previously done manualy.
 
 
 <!-- 
@@ -113,7 +116,7 @@ The overview for the literature review can be seen in the figure below.
 #### 英訳
 Optical character recognition is to recognize characters on an image and convert them into character data. Conventional image recognition has been performed by template matching for comparing bit differences between recognition target images and font images. This method is weak against the inclination and rotation of the image. It shows high accuracy for the image scanned by the scanner, but recognition of characters from the photograph is far from practical use. Recent studies have shown that using machine learning can achieve higher accuracy than this. Therefore, we aim at recognition of character strings in photos using deep learning which is a type of machine learning.
 
-### 物体検出
+### Object detection
 物体検出の概略について示す。
 #### 例
 物体検出は画像を取り込み、画像の中から定められた物体の位置とカテゴリ(クラス)を検出することである。
@@ -132,8 +135,7 @@ YOLOについて説明する
 YOLOは2016年に発表されたリアルタイム物体検出アルゴリズムである。
 既存の画像検出のアルゴリズムである「DPM」や「R-CNN」は、画像の領域推定と分類が分断されており、それゆえ処理が複雑であり、かつ処理時間も長くなりがちであった。 「YOLO」では、画像検出を回帰問題に落とし込み、「画像の領域推定」と「分類」を同時に行うことを実現した。 「YOLO」のアルゴリズムは１つのCNNで完結するためシンプルであり、また既存の手法と比較して処理が早く、背景の誤検出が少ないなどのメリットを得ることができる。
 #### 英訳
-YOLO is a real-time object detection algorithm, which was announced in 2016.
-Regarding existing image detection algorithms such as "DPM" and "R - CNN", region estimation and classification of images are separated, and therefore processing tends to be complicated and processing time tends to be long. In "YOLO", we perform that "image area estimation" and "classification" at the same time. The algorithm of "YOLO" is simple because it is completed with one CNN, and it has merits such as quick processing as compared with the existing method, less background error detection.
+YOLO is a real-time object detection algorithm, which was announced in 2016.  Regarding existing image detection algorithms such as "DPM" and "R - CNN", region estimation and classification of images are separated, and therefore processing tends to be complicated and processing time tends to be long. In "YOLO", we perform that "image area estimation" and "classification" at the same time. The algorithm of "YOLO" is simple because it is completed with one CNN, and it has merits such as quick processing as compared with the existing method, less background error detection.
 
 ### R-CNN, Fast R-CNN, Faster R-CNN
 Faster　R-CNNについて説明する。
@@ -144,11 +146,7 @@ Fast R-CNNはCNN　Detectorの実行回数を減らすためにモデルを改�
 Faster R-CNNはFaster R-CNNでボトルネックであったRegion Proposalを改善したものである。
 Faster R-CNNでは似た特徴を持った小さい領域を統合させていくことで、物体が存在しそうな領域に当たりをつけるSelective Search(選択的検索法)という手法が用いられた。
 #### 英訳
-R-CNN was invented based on CNN extracting features from the entire image. It can detect features of each region and that is close to human's recognition process.
-First, in R-CNN, region proposal is extracted from the input image. Then, we do recognition for the proposed region.
-Fast R-CNN is an improvement of R-CNN model to reduce the execution count of the CNN Detector.
-Faster R-CNN is an improvement of Faster R-CNN model to make the region proposal which is a bottleneck in Faster R-CNN better.
-Faster R-CNN integrates small regions having similar features, and chooses an area where an object is likely to exist.
+R-CNN was invented based on CNN extracting features from the entire image. It can detect features of each region and that is close to human's recognition process.  First, in R-CNN, region proposal is extracted from the input image. Then, we do recognition for the proposed region.  Fast R-CNN is an improvement of R-CNN model to reduce the execution count of the CNN Detector.  Faster R-CNN is an improvement of Faster R-CNN model to make the region proposal which is a bottleneck in Faster R-CNN better.  Faster R-CNN integrates small regions having similar features, and chooses an area where an object is likely to exist.
 
 
 
@@ -162,9 +160,7 @@ Faster R-CNN integrates small regions having similar features, and chooses an ar
 #### 例
 概要を図_Xに示す。我々の提案手法は3つのプロセスに分けられる。写真からラベルを抽出するプロセス、切り出した画像に対して何らかの画像処理を行うプロセス、出力された画像に対して認識を行うプロセスである。
 #### 英訳
-The overview is shown in Figure below. Our proposed method can be divirded into three processes.
-A process of extracting a label from a photograph, a process of image processing on the cut of image, and a process of 
-zing the output.
+The overview is shown in Figure below. Our proposed method can be divirded into three processes.  A process of extracting a label from a photograph, a process of image processing on the cut of image, and a process of zing the output.
 
 
 ### Find label from picture
@@ -178,13 +174,7 @@ YOLOのアノテーションデータの構造は単純で、{カテゴリ番号
 直接ファイルを編集するのは大変なのでラベリングには、ラベリング用の入力支援ツールを使う事で、作業を視覚的に行うことができる。
 我々は、大量の写真に手作業でラベリングを行った。
 #### 英訳
-Before recognizing characters, we extract the label region including character strings to be recognized from the photograph. By doing this, it is possible to suppress the detection of metabolism of characters and to reduce the calculation amount.
-To detect the label area, use YOLO as before.
-First of all, we do labeling on a plain picture.
-Labeling is to give additional information such as classes and their coordinates included in images to original data, and machine learning learns based on this annotation data. For training data, we use photographs of streetlight poles shot from in-vehicle camera.
-The structure of YOLO's annotation data is simple and is expressed as {height of width object of center y coordinate object of center x coordinate object of category number object}.
-Since it is hard to edit the file directly, it is possible to visually perform the work by using the input support tool for labeling for labeling.
-We manually labeled a large number of photographs.
+Before recognizing characters, we extract the label region including character strings to be recognized from the photograph. By doing this, it is possible to suppress the detection of metabolism of characters and to reduce the calculation amount.  To detect the label area, use YOLO as before.  First of all, we do labeling on a plain picture.  Labeling is to give additional information such as classes and their coordinates included in images to original data, and machine learning learns based on this annotation data. For training data, we use photographs of streetlight poles shot from in-vehicle camera.  The structure of YOLO's annotation data is simple and is expressed as {height of width object of center y coordinate object of center x coordinate object of category number object}.  Since it is hard to edit the file directly, it is possible to visually perform the work by using the input support tool for labeling for labeling.  We manually labeled a large number of photographs.
 
 
 ### Image prosessing
@@ -198,8 +188,7 @@ We manually labeled a large number of photographs.
 以上によって平面の画像を得る
 
 #### 英訳
-Ordinary, image recognition technology is designed for a flatten image. If distorted images are used for recognition, high accuracy can not be obtained. Therefore, it is necessary to transform label to a flat surface.
-To transform a curved surface image into a plane, use the following method.
+Ordinary, image recognition technology is designed for a flatten image. If distorted images are used for recognition, high accuracy can not be obtained. Therefore, it is necessary to transform label to a flat surface.  To transform a curved surface image into a plane, use the following method.
 1. First, detect the pole using YOLO
 1. Next, the size of the x direction of the detected pole is defined as a diameter.
 1. Calculate the projection of a cylinder
@@ -211,9 +200,7 @@ To transform a curved surface image into a plane, use the following method.
 YOLOを用いてアルファベットa-zA-Zの52クラスの物体検知を行う。
 訓練には、フォントXにノイズを載せたり変形したりして水増ししたデータを用いる。
 #### 英訳
-Recognize characters from flatten image. The recognition process is shown below.
-We perform object detection of 52 classes of alphabet a - z A - Z using YOLO.
-For training, use padded font data by placing noise on the image or deforming it.
+Recognize characters from flatten image. The recognition process is shown below.  We perform object detection of 52 classes of alphabet a - z A - Z using YOLO.  For training, use padded font data by placing noise on the image or deforming it.
 
 ### Data Augmentation
 #### 例
@@ -227,7 +214,7 @@ By applying data augmentation, it is possible to recognize with high accuracy wi
 ### Workflow
 研究計画についてガントチャートを用いて説明する。
 #### 例
-研究計画を以下に示す。
+We can see the Gantt chart of the workflow below.
 1. FYP Proposal {Sept - Dec}
 1. Literature Review {Sept, Oct}
 1. Explore deep learning {Sept, Oct}
@@ -256,10 +243,7 @@ What we have done
 街灯は、認識精度を分析するために、三種類の形の違う街灯をラベリングした。
 ラベリングには、labelimgというソフトを使用した。ラベリングの例を図_Xに示す。
 #### 英訳
-We manually labeled streetlights and label areas from landscape images taken from the in-vehicle camera as training data.
-In order to analyze the recognition accuracy, we labeled three different types of street lamp.
-For labeling, we used software named labelimg.
-An example of labeling is shown below.
+We manually labeled streetlights and label areas from landscape images taken from the in-vehicle camera as training data.  In order to analyze the recognition accuracy, we labeled three different types of street lamp.  For labeling, we used software named labelimg.  An example of labeling is shown below.
 
 ### Expected Results
 期待される結果について考察する
