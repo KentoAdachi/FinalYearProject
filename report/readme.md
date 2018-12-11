@@ -127,6 +127,10 @@ Faster　R-CNNについて説明する。
 Faster RCNNは特徴マップを抽出するConvolutional Layerと物体領域を抽出する Region Proposal Networkと分類、回帰の結果を出力するネットワークで構成されています。
 Conv Layerで得られた結果をRegion Proposal Networkを使い、領域を抽出し、分類しています。特に重要なのはRegion Proposal Networkと記載されている部分で、ここが従来手法からのFaster RCNNの改善になる部分です。
 
+### SSD
+SSDについて説明する。
+#### 例
+
 
 ### 画像認識に関する論文X
 前例を洗ってこれを分析する。
