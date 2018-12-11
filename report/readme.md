@@ -135,6 +135,8 @@ Faster　R-CNNについて説明する。
 #### 例
 R-CNNは画像全体から特徴を抽出するCNNを元に考案された。それはRegion毎の特徴を検出可能であり、人間の行う認識に近い。
 R-CNNではまず、入力画像からregion proposalを抽出する。そして、proposed regionに対して認識を行う。
+Fast R-CNNはCNN　Detectorの実行回数を減らすためにモデルを改善したものである。
+Faster R-CNNはFaster R-CNNでボトルネック出会ったRegion Proposalを改善したものである。
 
 似た特徴を持った小さい領域を統合させていくことで、物体が存在しそうな領域に当たりをつけるSelective Search(選択的検索法)という手法が用いられた。
 
