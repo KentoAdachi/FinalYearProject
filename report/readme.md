@@ -33,6 +33,7 @@ LABEL DETECTION ON THE POLE
     1. REFERENCES 
     
 
+
 ## Chapter1 - Introduction
 ### Background of the Problem
 本研究の意義と現状の課題を記述する
@@ -84,6 +85,11 @@ YOLO shows high accuracy as well as Faster R-CNN in object detection and much fa
 
 Machine learning also requires large resources. Therefore, it is often done with desktop PC with GPU and CPU power,in this research, Nvidia Jetson Xavier is used for real time detection.
 
+<!-- 
+①物体領域候補の提案
+②検出物体のクラス分類
+③領域の調整（回帰）
+-->
 ## CHAPTER 2 - LITERATURE REVIEW
 関連する過去の論文や資料、文献を要約、批判的分析を述べる。
 ### Overview
@@ -105,12 +111,15 @@ Optical character recognition is to recognize characters on an image and convert
 #### 例
 物体検出は画像を取り込み、画像の中から定められた物体の位置とカテゴリ(クラス)を検出することである。
 下図のように、画像の中からバウンディングボックスと呼ばれる矩形の位置とそのカテゴリを識別します。
+
+初学者向けの画像認識の実装例に「手書き文字の認識」があるが、現実の画像においては、物体が1つであるとは限らない。そこで、1枚の画像の中で様々なサイズで写っている複数の物体を上手く切り出すバウンディングボックスを探す。それをクラス分類の問題にする必要がある。
+
 図_X
 #### 英訳
 Object detection is to capture an image and detect the position and category (class) of the object determined from the image.
 As shown in the figure below, we identify the position of the rectangle called the bounding box and its category from the image.
 
- 
+There is "handwritten characters recognition" in the implementation example of image recognition, but in actual images, there is not always only one object. Normaly, we have to find the various sized of bounding boxes in one image. After that, we can Clasify each images.
 
 ### YOLO
 YOLOについて説明する
@@ -126,6 +135,9 @@ Faster　R-CNNについて説明する。
 #### 例
 Faster RCNNは特徴マップを抽出するConvolutional Layerと物体領域を抽出する Region Proposal Networkと分類、回帰の結果を出力するネットワークで構成されています。
 Conv Layerで得られた結果をRegion Proposal Networkを使い、領域を抽出し、分類しています。特に重要なのはRegion Proposal Networkと記載されている部分で、ここが従来手法からのFaster RCNNの改善になる部分です。
+
+似た特徴を持った小さい領域を統合させていくことで、物体が存在しそうな領域に当たりをつけるSelective Search(選択的検索法)という手法が用いられた。
+
 
 ### SSD
 SSDについて説明する。
