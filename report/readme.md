@@ -194,7 +194,7 @@ Before recognizing characters, we extract the label region including character s
 #### 英訳
 Ordinary, image recognition technology is designed for a flatten image. If distorted images are used for recognition, high accuracy can not be obtained. Therefore, it is necessary to transform label to a flat surface.  To transform a curved surface image into a plane, use the following method.
 1. First, detect the pole using YOLO
-1. Next, calculate the center of x-axis of detected pole.
+1. Next, calculate the center of x-coordinate of detected pole.
 1. Calculate the projection of a cylinder
 
 This transformation reduces the distortion in the lateral direction, and recognition can be performed with higher accuracy.
