@@ -69,7 +69,7 @@ In this research, we recognize characters on objects, especially on cylinder. Re
 強力な組み込みGPUであるNvidia Jetsonによってクライアント側でのMachine Learningを行う。
 
 #### 英訳
-1. Increase the accuracy of recognizing character strings in a cylindrical curved surface using deep learning.
+1. Increase the accuracy of recognizing character strings on the surface of cylinder using deep learning.
 1. To use powerful built-in GPU Nvidia Jetson Xavier to develop deep learning on the client side.
 
 ### Scope of study
