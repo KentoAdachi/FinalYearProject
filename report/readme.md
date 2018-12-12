@@ -187,11 +187,15 @@ Before recognizing characters, we extract the label region including character s
 1. ポールの形状がわかったので射影を求め平面に展開する
 以上によって平面の画像を得る
 
+この変換によって横方向の歪みが軽減されて、より高い精度で認識が行える
+
 #### 英訳
 Ordinary, image recognition technology is designed for a flatten image. If distorted images are used for recognition, high accuracy can not be obtained. Therefore, it is necessary to transform label to a flat surface.  To transform a curved surface image into a plane, use the following method.
 1. First, detect the pole using YOLO
 1. Next, the size of the x direction of the detected pole is defined as a diameter.
 1. Calculate the projection of a cylinder
+
+This transformation reduces the distortion in the lateral direction, and recognition can be performed with higher accuracy.
 
 ### Label recognition
 平面に展開された画像に対して認識を行うプロセスについて説明する。
