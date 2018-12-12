@@ -187,7 +187,9 @@ Before recognizing characters, we extract the label region including character s
 1. ポールの形状がわかったので射影を求め平面に展開する
 以上によって平面の画像を得る
 
+街灯の直径は法線方向を割り出すのに必要
 この変換によって横方向の歪みが軽減されて、より高い精度で認識が行える
+
 
 #### 英訳
 Ordinary, image recognition technology is designed for a flatten image. If distorted images are used for recognition, high accuracy can not be obtained. Therefore, it is necessary to transform label to a flat surface.  To transform a curved surface image into a plane, use the following method.
