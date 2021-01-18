@@ -1,4 +1,4 @@
-# FINAL YEAR PROJECT
+# FINAL YEAR PROJECT (マレーシア工科大学研究留学時代の卒研)
 Pole Text Detection
 
 ## 概要
